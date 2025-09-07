@@ -1,8 +1,10 @@
-const loadTodo = () =>{
-    const url = "https://jsonplaceholder.typicode.com/todos"
-    fetch(url)
-    .then (response=>response.json())
-    .then(data=> displayTodo(data));
+const loadTodo = async () =>{
+    const url = "https://jsonplaceholder.typicode.com/todos";
+    const response = await fetch(url);
+    const data = await response.json();
+    // .then (response=>response.json())
+    // .then(data=> 
+    displayTodo(data);
 };
 
 const displayTodo = (todos) =>{
